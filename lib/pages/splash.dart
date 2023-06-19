@@ -15,8 +15,8 @@ class Splash extends StatelessWidget {
       //
       Map e = box.read("agent") ?? {};
       //
-      //Get.off(Login());
-      Get.off(Accueil());
+      Get.off(Login());
+      //Get.off(Accueil());
       //Get.off(Admin());
     });
   }

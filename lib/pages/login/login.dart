@@ -25,7 +25,8 @@ class Login extends StatelessWidget {
         child: Container(
           height: Get.size.height / 3,
           width: 400,
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          margin: const EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
             color: Colors.indigo.shade900,
             borderRadius: BorderRadius.circular(50),

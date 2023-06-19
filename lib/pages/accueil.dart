@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'activite/activite.dart';
+import 'course/course.dart';
 import 'profil/profil.dart';
+import 'recherche/recherche.dart';
 
 class Accueil extends StatefulWidget {
   @override
@@ -38,7 +40,13 @@ class _Accueil extends State<Accueil> {
         backgroundColor: Colors.indigo.shade900,
       ),
       body: Obx(
-        () => index.value == 0 ? Activite() : Profil(e, true),
+        () => index.value == 0
+            ? Activite()
+            : index.value == 1
+                ? Course()
+                : index.value == 2
+                    ? Recherche()
+                    : Profil(e, true),
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (e) {
@@ -48,9 +56,14 @@ class _Accueil extends State<Accueil> {
         },
         currentIndex: index.value,
         selectedItemColor: Colors.indigo.shade900,
+        unselectedItemColor: Colors.grey.shade400,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.list_dash), label: "Activité"),
+          BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.bus), label: "Course"),
+          BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.search), label: "Recherche"),
           BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.person), label: "Profil"),
         ],

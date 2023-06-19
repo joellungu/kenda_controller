@@ -16,10 +16,10 @@ class Profil extends StatelessWidget {
       //padding: const EdgeInsets.all(10),
       children: [
         ListTile(
-          title: Text("Nom"),
+          title: const Text("Nom"),
           subtitle: Text(e["nom"]),
           trailing: IconButton(
-            icon: Icon(Icons.edit),
+            icon: const Icon(Icons.edit),
             onPressed: () {
               var nom = TextEditingController();
               //
@@ -90,9 +90,21 @@ class Profil extends StatelessWidget {
         ListTile(
           title: Text("Role"),
           subtitle: Text(e["roletitre"]),
+          // trailing: IconButton(
+          //   icon: Icon(Icons.edit),
+          //   onPressed: () {},
+          // ),
+        ),
+        ListTile(
+          title: Text("Mot de passe"),
+          subtitle: Text("*************"), //e["password"]
           trailing: IconButton(
             icon: Icon(Icons.edit),
-            onPressed: () {},
+            onPressed: () {
+              var pwd = TextEditingController();
+              //
+              modifierInfo(e, context, pwd, "password");
+            },
           ),
         ),
       ],

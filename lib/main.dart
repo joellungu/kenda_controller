@@ -3,10 +3,16 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
+import 'pages/course/course_controller.dart';
+import 'pages/recherche/recherche_controller.dart';
 import 'pages/splash.dart';
 import 'utils/app_controller.dart';
 
 void main() async {
+  //
+  RechercheController rechercheController = Get.put(RechercheController());
+  //
+  CourseController courseController = Get.put(CourseController());
   //
   SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(statusBarColor: Colors.indigo.shade900));
@@ -24,7 +30,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Kenda',
+      title: 'Kenda Agent',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.from(
         colorScheme: const ColorScheme.light(),
         textTheme: const TextTheme(),

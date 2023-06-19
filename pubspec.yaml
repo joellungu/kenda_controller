@@ -38,7 +38,7 @@ dependencies:
   get_storage:
   get:
   qr_code_scanner:
-  flutter_barcode_scanner: ^2.0.0
+  simple_barcode_scanner: ^0.0.8
 
 dev_dependencies:
   flutter_test:
