@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:kenda_agent/pages/accueil.dart';
+import 'package:kenda_agent/pages/vendeur/accueil_vendeur.dart';
 import 'requetes.dart';
 
 class AppController extends GetxController {
@@ -12,7 +13,7 @@ class AppController extends GetxController {
   //
   loagingAgent(String numero, String mdp) async {
     //
-    Response rep = await requete.getE("agents/login/$numero/$mdp");
+    Response rep = await requete.getE("agent/login/$numero/$mdp");
     if (rep.isOk) {
       print(rep.statusCode);
       print(rep.body);
@@ -22,9 +23,21 @@ class AppController extends GetxController {
       );
       //
       Get.back();
-      //
-      if (rep.body['actif']) {
-        Get.off(Accueil());
+      /**
+       * "Chauffeur",
+       * "Receveur",
+       * "Embarqueur",
+       * "Vendeur",
+       * "gestionneur" */
+
+      if (rep.body['actif'] &&
+          ["Chauffeur", "Receveur", "Embarqueur", "Vendeur"]
+              .contains(rep.body['roletitre'])) {
+        if (rep.body['roletitre'] == "Vendeur") {
+          Get.off(AccueilVendeur());
+        } else {
+          Get.off(Accueil());
+        }
       } else {
         Get.snackbar("Erreur",
             "Vous n'etes plus actif veuillez contacter vos superieurs.");
@@ -88,7 +101,7 @@ class AppController extends GetxController {
 
   //getCompanie
   Future<Map> getCompanie(String id) async {
-    Response rep = await requete.getE("partenaires/$id");
+    Response rep = await requete.getE("companie/$id");
     if (rep.isOk) {
       return rep.body;
     } else {

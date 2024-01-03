@@ -12,102 +12,104 @@ class Profil extends StatelessWidget {
   //
   @override
   Widget build(BuildContext context) {
-    return Column(
-      //padding: const EdgeInsets.all(10),
-      children: [
-        ListTile(
-          title: const Text("Nom"),
-          subtitle: Text(e["nom"]),
-          trailing: IconButton(
-            icon: const Icon(Icons.edit),
-            onPressed: () {
-              var nom = TextEditingController();
-              //
-              modifierInfo(e, context, nom, "nom");
-            },
+    return Scaffold(
+      body: Column(
+        //padding: const EdgeInsets.all(10),
+        children: [
+          ListTile(
+            title: const Text("Nom"),
+            subtitle: Text(e["nom"]),
+            trailing: IconButton(
+              icon: const Icon(Icons.edit),
+              onPressed: () {
+                var nom = TextEditingController();
+                //
+                modifierInfo(e, context, nom, "nom");
+              },
+            ),
           ),
-        ),
-        ListTile(
-          title: Text("Postnom"),
-          subtitle: Text(e["postnom"]),
-          trailing: IconButton(
-            icon: Icon(Icons.edit),
-            onPressed: () {
-              var postnom = TextEditingController();
-              //
-              modifierInfo(e, context, postnom, "postnom");
-            },
+          ListTile(
+            title: Text("Postnom"),
+            subtitle: Text(e["postnom"]),
+            trailing: IconButton(
+              icon: Icon(Icons.edit),
+              onPressed: () {
+                var postnom = TextEditingController();
+                //
+                modifierInfo(e, context, postnom, "postnom");
+              },
+            ),
           ),
-        ),
-        ListTile(
-          title: Text("Prenom"),
-          subtitle: Text(e["prenom"]),
-          trailing: IconButton(
-            icon: Icon(Icons.edit),
-            onPressed: () {
-              var prenom = TextEditingController();
-              //
-              modifierInfo(e, context, prenom, "prenom");
-            },
+          ListTile(
+            title: Text("Prenom"),
+            subtitle: Text(e["prenom"]),
+            trailing: IconButton(
+              icon: Icon(Icons.edit),
+              onPressed: () {
+                var prenom = TextEditingController();
+                //
+                modifierInfo(e, context, prenom, "prenom");
+              },
+            ),
           ),
-        ),
-        ListTile(
-          title: Text("Téléphone"),
-          subtitle: Text("${e["numero"]}"),
-          trailing: IconButton(
-            icon: Icon(Icons.edit),
-            onPressed: () {
-              var numero = TextEditingController();
-              //
-              modifierInfo(e, context, numero, "numero");
-            },
+          ListTile(
+            title: Text("Téléphone"),
+            subtitle: Text("${e["numero"]}"),
+            trailing: IconButton(
+              icon: Icon(Icons.edit),
+              onPressed: () {
+                var numero = TextEditingController();
+                //
+                modifierInfo(e, context, numero, "numero");
+              },
+            ),
           ),
-        ),
-        ListTile(
-          title: Text("Email"),
-          subtitle: Text(e["email"]),
-          trailing: IconButton(
-            icon: Icon(Icons.edit),
-            onPressed: () {
-              var email = TextEditingController();
-              //
-              modifierInfo(e, context, email, "email");
-            },
+          ListTile(
+            title: Text("Email"),
+            subtitle: Text(e["email"]),
+            trailing: IconButton(
+              icon: Icon(Icons.edit),
+              onPressed: () {
+                var email = TextEditingController();
+                //
+                modifierInfo(e, context, email, "email");
+              },
+            ),
           ),
-        ),
-        ListTile(
-          title: Text("Adresse"),
-          subtitle: Text(e["adresse"]),
-          trailing: IconButton(
-            icon: Icon(Icons.edit),
-            onPressed: () {
-              var adresse = TextEditingController();
-              //
-              modifierInfo(e, context, adresse, "adresse");
-            },
+          ListTile(
+            title: Text("Adresse"),
+            subtitle: Text(e["adresse"]),
+            trailing: IconButton(
+              icon: Icon(Icons.edit),
+              onPressed: () {
+                var adresse = TextEditingController();
+                //
+                modifierInfo(e, context, adresse, "adresse");
+              },
+            ),
           ),
-        ),
-        ListTile(
-          title: Text("Role"),
-          subtitle: Text(e["roletitre"]),
-          // trailing: IconButton(
-          //   icon: Icon(Icons.edit),
-          //   onPressed: () {},
-          // ),
-        ),
-        ListTile(
-          title: Text("Mot de passe"),
-          subtitle: Text("*************"), //e["password"]
-          trailing: IconButton(
-            icon: Icon(Icons.edit),
-            onPressed: () {
-              var pwd = TextEditingController();
-              //
-              modifierInfo(e, context, pwd, "password");
-            },
+          ListTile(
+            title: Text("Role"),
+            subtitle: Text(e["roletitre"]),
+            // trailing: IconButton(
+            //   icon: Icon(Icons.edit),
+            //   onPressed: () {},
+            // ),
           ),
-        ),
-      ],
+          ListTile(
+            title: const Text("Mot de passe"),
+            subtitle: const Text("*************"), //e["password"]
+            trailing: IconButton(
+              icon: const Icon(Icons.edit),
+              onPressed: () {
+                var pwd = TextEditingController();
+                //
+                modifierInfo(e, context, pwd, "password");
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -215,3 +217,7 @@ class Profil extends StatelessWidget {
     );
   }
 }
+
+/**
+ * 
+ */

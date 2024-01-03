@@ -23,7 +23,7 @@ class TicketDetails extends StatelessWidget {
         right: false,
         bottom: false,
         child: FutureBuilder(
-          future: appController.getDetails("37", """$uniqueCode"""),
+          future: appController.getDetails(idPartenaire!, """$uniqueCode"""),
           builder: (c, t) {
             if (t.hasData) {
               Map e = t.data as Map;
@@ -116,7 +116,7 @@ class TicketDetails extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      height: Get.size.height / 7,
+                      height: Get.size.height / 6,
                       //color: Colors.blue,
                       decoration: BoxDecoration(
                         border: Border(

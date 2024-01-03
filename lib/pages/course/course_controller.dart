@@ -35,7 +35,8 @@ class CourseController extends GetxController with StateMixin<List> {
     print("${a['idPartenaire']}");
     //d
     //${a['idPartenaire']}
-    Response rep = await requete.getE("tickets/course/${a['idPartenaire']}/$d");
+    Response rep =
+        await requete.getE("tickets/courseday/${a['idPartenaire']}/$d");
     print(rep.statusCode);
     print(rep.body);
     if (rep.isOk) {

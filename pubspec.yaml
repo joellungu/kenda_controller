@@ -37,8 +37,17 @@ dependencies:
   cupertino_icons: ^1.0.2
   get_storage:
   get:
-  qr_code_scanner:
+  shimmer:
+  http:
+  google_fonts: ^5.1.0
+  share_plus: ^4.1.0
   simple_barcode_scanner: ^0.0.8
+  web_socket_channel: ^2.2.0
+  random_string: ^2.3.1
+  timelines: ^0.1.0
+  connectivity_plus: ^2.3.6+1
+  flutter_widget_from_html: ^0.8.5
+  fl_country_code_picker: ^0.0.3
 
 dev_dependencies:
   flutter_test:

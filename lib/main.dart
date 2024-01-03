@@ -6,13 +6,28 @@ import 'package:get_storage/get_storage.dart';
 import 'pages/course/course_controller.dart';
 import 'pages/recherche/recherche_controller.dart';
 import 'pages/splash.dart';
+import 'pages/vendeur/recherche/lieu_controller.dart';
+import 'pages/vendeur/recherche/resultat_controller.dart';
+import 'pages/vendeur/reservations/paiement/paiement_controller.dart';
+import 'pages/vendeur/reservations/reservation_controller.dart';
 import 'utils/app_controller.dart';
 
 void main() async {
   //
+  WidgetsFlutterBinding.ensureInitialized();
+  //
   RechercheController rechercheController = Get.put(RechercheController());
   //
   CourseController courseController = Get.put(CourseController());
+  //
+  ReservationController reservationController =
+      Get.put(ReservationController());
+  //
+  PaiementController paiementController = Get.put(PaiementController());
+  //
+  LieuController lieuController = Get.put(LieuController());
+  //
+  ResultatController resultatController = Get.put(ResultatController());
   //
   SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(statusBarColor: Colors.indigo.shade900));
