@@ -82,7 +82,7 @@ class Horaire extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                         image: NetworkImage(
-                                            "${Requete.urlSt}companie/profil.png?id=${e['idPartenaire']}"),
+                                            "${Requete.urlSt}/companie/profil.png?id=${e['idPartenaire']}"),
                                       ),
                                       borderRadius: BorderRadius.circular(25),
                                     ),

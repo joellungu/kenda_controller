@@ -346,7 +346,7 @@ class _Paiement extends State<Paiement> {
                                 "itinerance": "${widget.e['troncons']}",
                                 //"idAgent": "",
                                 "idAgentVendeur": agent['id'],
-                                "datePaiement": "${d.day}/${d.month}/${d.year}",
+                                "datePaiement": "${d.day}-${d.month}-${d.year}",
                                 "emplacement": reservationController.places[i]
                                     ["emplacement"],
                                 "status": 0,

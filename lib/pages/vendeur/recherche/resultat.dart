@@ -351,7 +351,7 @@ class Resultat extends GetView<ResultatController> {
                                                   decoration: BoxDecoration(
                                                     image: DecorationImage(
                                                       image: NetworkImage(
-                                                          "${Requete.urlSt}companie/profil.png?id=${e['idPartenaire']}"),
+                                                          "${Requete.urlSt}/companie/profil.png?id=${e['idPartenaire']}"),
                                                     ),
                                                     borderRadius:
                                                         BorderRadius.circular(

@@ -34,9 +34,9 @@ class AppController extends GetxController {
           ["Chauffeur", "Receveur", "Embarqueur", "Vendeur"]
               .contains(rep.body['roletitre'])) {
         if (rep.body['roletitre'] == "Vendeur") {
-          Get.off(AccueilVendeur());
+          Get.offAll(AccueilVendeur());
         } else {
-          Get.off(Accueil());
+          Get.offAll(Accueil());
         }
       } else {
         Get.snackbar("Erreur",

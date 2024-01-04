@@ -208,7 +208,7 @@ class Details extends StatelessWidget {
                               ),
                               alignment: Alignment.centerRight,
                               child: Image.network(
-                                "${Requete.url}companie/profil.png?id=${e['idPartenaire']}",
+                                "${Requete.url}/companie/profil.png?id=${e['idPartenaire']}",
                                 height: 50,
                                 width: 50,
                                 loadingBuilder: (context, child,

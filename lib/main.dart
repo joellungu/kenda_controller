@@ -6,6 +6,7 @@ import 'package:get_storage/get_storage.dart';
 import 'pages/course/course_controller.dart';
 import 'pages/recherche/recherche_controller.dart';
 import 'pages/splash.dart';
+import 'pages/vendeur/historiques/historique_controller.dart';
 import 'pages/vendeur/recherche/lieu_controller.dart';
 import 'pages/vendeur/recherche/resultat_controller.dart';
 import 'pages/vendeur/reservations/paiement/paiement_controller.dart';
@@ -34,6 +35,8 @@ void main() async {
   await GetStorage.init();
   //
   AppController appController = Get.put(AppController());
+  //
+  HistoriqueController historiqueController = Get.put(HistoriqueController());
   //
   runApp(const MyApp());
 }

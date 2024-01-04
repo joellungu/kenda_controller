@@ -163,7 +163,7 @@ class _Infos extends State<Infos> {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: NetworkImage(
-                              "${Requete.urlSt}companie/profil.png?id=${widget.details['idPartenaire']}"),
+                              "${Requete.urlSt}/companie/profil.png?id=${widget.details['idPartenaire']}"),
                         ),
                         borderRadius: BorderRadius.circular(25),
                       ),

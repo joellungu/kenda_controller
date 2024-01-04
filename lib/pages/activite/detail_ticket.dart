@@ -233,6 +233,62 @@ class TicketDetails extends StatelessWidget {
                               size: 15,
                             ),
                           ),
+                          ListTile(
+                            onTap: () {
+                              //showSimpleModal(Emplacement(), context);
+                            },
+                            leading:
+                                Icon(Icons.airline_seat_recline_extra_rounded),
+                            title: const Text("Emplacement dans le bus"),
+                            subtitle:
+                                Text("Place N° ${e['infoPersonnel']['nom']}"),
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              size: 15,
+                            ),
+                          ),
+                          ListTile(
+                            onTap: () {
+                              //showSimpleModal(Emplacement(), context);
+                            },
+                            leading:
+                                Icon(Icons.airline_seat_recline_extra_rounded),
+                            title: const Text("Emplacement dans le bus"),
+                            subtitle: Text(
+                                "Place N° ${e['infoPersonnel']['telephone']}"),
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              size: 15,
+                            ),
+                          ),
+                          ListTile(
+                            onTap: () {
+                              //showSimpleModal(Emplacement(), context);
+                            },
+                            leading:
+                                Icon(Icons.airline_seat_recline_extra_rounded),
+                            title: const Text("Emplacement dans le bus"),
+                            subtitle: Text(
+                                "Place N° ${e['infoPersonnel']['adresse']}"),
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              size: 15,
+                            ),
+                          ),
+                          ListTile(
+                            onTap: () {
+                              //showSimpleModal(Emplacement(), context);
+                            },
+                            leading:
+                                Icon(Icons.airline_seat_recline_extra_rounded),
+                            title: const Text("Emplacement dans le bus"),
+                            subtitle:
+                                Text("Place N° ${e['infoPersonnel']['sexe']}"),
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              size: 15,
+                            ),
+                          ),
                           // const ListTile(
                           //   leading: Icon(Icons.map),
                           //   title: Text("Voir la carte"),

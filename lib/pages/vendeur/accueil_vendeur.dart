@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:kenda_agent/pages/profil/profil.dart';
+import 'package:kenda_agent/pages/vendeur/historiques/historique.dart';
 // import 'activite/activite.dart';
 // import 'course/course.dart';
 // import 'profil/profil.dart';
@@ -44,7 +45,7 @@ class _Accueil extends State<AccueilVendeur> {
         () => index.value == 0
             ? Recherche()
             : index.value == 1
-                ? Container()
+                ? Historique()
                 : Profil(e, true),
       ),
       bottomNavigationBar: BottomNavigationBar(
