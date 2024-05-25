@@ -12,7 +12,11 @@ import 'modal.dart';
 class Horaire extends StatelessWidget {
   Map e;
   DateTime date;
-  Horaire(this.e, this.date);
+
+  String depart;
+  String arrive;
+  //
+  Horaire(this.e, this.date, this.depart, this.arrive);
   //
   ReservationController reservationController = Get.find();
   //idPartenaire
@@ -46,6 +50,8 @@ class Horaire extends StatelessWidget {
                         //
                         showSimpleModal(
                           Emplacement(
+                            depart,
+                            arrive,
                             l: l,
                             e: e,
                             date: date,

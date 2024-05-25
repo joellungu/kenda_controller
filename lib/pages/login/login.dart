@@ -19,7 +19,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //color: Colors.red.shade900, // Status bar color
+      color: Colors.black, // Status bar color
       child: SafeArea(
         left: false,
         right: false,
@@ -53,11 +53,11 @@ class Login extends StatelessWidget {
                           height: 100,
                           width: 100,
                           decoration: const BoxDecoration(
-                            color: Colors.amber,
-                            // image: DecorationImage(
-                            //   image: ExactAssetImage("assets/logo_MIN SANTE.png"),
-                            //   fit: BoxFit.cover,
-                            // ),
+                            //color: Colors.amber,
+                            image: DecorationImage(
+                              image: ExactAssetImage("assets/AiYA.png"),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                         // Image.asset(
@@ -91,13 +91,13 @@ class Login extends StatelessWidget {
                             return null;
                           },
                           decoration: InputDecoration(
-                            contentPadding: EdgeInsets.symmetric(vertical: 5),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            prefixIcon: const Icon(Icons.person),
-                            hintText: "Nom d'utilisateur",
-                          ),
+                              contentPadding: EdgeInsets.symmetric(vertical: 5),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              prefixIcon: const Icon(Icons.person),
+                              hintText: "Nom d'utilisateur",
+                              prefixText: "+243 "),
                         ),
                         const SizedBox(
                           height: 20,
@@ -140,12 +140,14 @@ class Login extends StatelessWidget {
                             //if (formKey.currentState!.validate()) {
                             //Get.off(Accueil());
 
-                            // Get.dialog(Container(
-                            //   height: 40,
-                            //   width: 40,
-                            //   child: const CircularProgressIndicator(),
-                            //   alignment: Alignment.center,
-                            // ));
+                            Get.dialog(
+                              Container(
+                                height: 40,
+                                width: 40,
+                                child: const CircularProgressIndicator(),
+                                alignment: Alignment.center,
+                              ),
+                            );
                             appController.loagingAgent(
                                 "243${numero.text}", mdp.text);
                             //Get.offAll(Accueil());
@@ -153,10 +155,10 @@ class Login extends StatelessWidget {
                             //   Get.back();
                             //   Get.off(Accueil());
                             // });
-                            Map e = {
-                              "pseudo": numero.text,
-                              "pwd": mdp.text,
-                            };
+                            // Map e = {
+                            //   "pseudo": numero.text,
+                            //   "pwd": mdp.text,
+                            // };
                             //appController.login(e);
                             //loginController.deja.value = true;
                             //}
@@ -172,8 +174,8 @@ class Login extends StatelessWidget {
                                 RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             )),
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blue.shade700),
+                            backgroundColor: MaterialStateProperty.all(
+                                Colors.green.shade900),
                           ),
                           child: Container(
                             alignment: Alignment.center,

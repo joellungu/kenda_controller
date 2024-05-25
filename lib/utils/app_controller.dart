@@ -39,6 +39,7 @@ class AppController extends GetxController {
           Get.offAll(Accueil());
         }
       } else {
+        Get.back();
         Get.snackbar("Erreur",
             "Vous n'etes plus actif veuillez contacter vos superieurs.");
       }

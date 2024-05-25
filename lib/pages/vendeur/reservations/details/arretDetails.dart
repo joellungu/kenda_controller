@@ -41,7 +41,7 @@ class _ArretsDetails extends State<ArretsDetails> {
           "Arrets",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.indigo.shade900,
+        backgroundColor: Colors.green.shade900,
         bottom: PreferredSize(
           preferredSize: Size(100, 35),
           child: Container(
@@ -223,7 +223,7 @@ class _ArretsDetails extends State<ArretsDetails> {
           //               bottom: 2,
           //             ),
           //             decoration: BoxDecoration(
-          //               color: Colors.indigo.shade900,
+          //               color: Colors.green.shade900,
           //               borderRadius: BorderRadius.circular(10),
           //               // gradient: LinearGradient(
           //               //   begin: Alignment.centerLeft,

@@ -188,7 +188,7 @@ class Course extends GetView<CourseController> {
                                                     child: Text(
                                                       "${e['reference']}",
                                                       style: TextStyle(
-                                                        fontSize: 25,
+                                                        fontSize: 20,
                                                         fontWeight:
                                                             FontWeight.normal,
                                                       ),

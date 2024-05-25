@@ -19,7 +19,7 @@ class TicketDetails2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.indigo.shade900,
+      color: Colors.green.shade900,
       child: SafeArea(
         left: false,
         right: false,
@@ -33,7 +33,7 @@ class TicketDetails2 extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            backgroundColor: Colors.indigo.shade900,
+            backgroundColor: Colors.green.shade900,
             leading: IconButton(
               onPressed: () {
                 //
@@ -512,18 +512,21 @@ class TicketQrCode extends StatelessWidget {
             ),
           ),
           Container(
-            height: Get.size.height / 1.5,
-            width: Get.size.width / 1.2,
-            alignment: Alignment.center,
-            // child: BarcodeWidget(
-            //   barcode: Barcode.qrCode(
-            //     errorCorrectLevel: BarcodeQRCorrectionLevel.high,
-            //   ),
-            //   data: '${e['unique_code']}',
-            //   width: 300,
-            //   height: 300,
-            // ),
-          )
+              height: Get.size.height / 1.5,
+              width: Get.size.width / 1.2,
+              alignment: Alignment.center,
+              child: Text("Code envoyé au numéro de paiement.")
+              /*
+              child: BarcodeWidget(
+              barcode: Barcode.qrCode(
+                errorCorrectLevel: BarcodeQRCorrectionLevel.high,
+              ),
+              data: '${e['unique_code']}',
+              width: 300,
+              height: 300,
+            ),
+            */
+              )
         ],
       ),
     );

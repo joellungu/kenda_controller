@@ -17,7 +17,7 @@ class TicketDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.indigo.shade900,
+      color: Colors.black,
       child: SafeArea(
         left: false,
         right: false,
@@ -36,7 +36,7 @@ class TicketDetails extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  backgroundColor: Colors.indigo.shade900,
+                  backgroundColor: Colors.black,
                   leading: IconButton(
                     onPressed: () {
                       //
@@ -224,8 +224,8 @@ class TicketDetails extends StatelessWidget {
                             onTap: () {
                               //showSimpleModal(Emplacement(), context);
                             },
-                            leading:
-                                Icon(Icons.airline_seat_recline_extra_rounded),
+                            leading: const Icon(
+                                Icons.airline_seat_recline_extra_rounded),
                             title: const Text("Emplacement dans le bus"),
                             subtitle: Text("Place N° ${e['emplacement']}"),
                             trailing: const Icon(
@@ -237,11 +237,22 @@ class TicketDetails extends StatelessWidget {
                             onTap: () {
                               //showSimpleModal(Emplacement(), context);
                             },
-                            leading:
-                                Icon(Icons.airline_seat_recline_extra_rounded),
-                            title: const Text("Emplacement dans le bus"),
+                            leading: Icon(Icons.person),
+                            title: const Text("Nom du passager"),
+                            subtitle: Text("${e['infoPersonnel']['nom']}"),
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              size: 15,
+                            ),
+                          ),
+                          ListTile(
+                            onTap: () {
+                              //showSimpleModal(Emplacement(), context);
+                            },
+                            leading: Icon(Icons.phone_android),
+                            title: const Text("Téléphone"),
                             subtitle:
-                                Text("Place N° ${e['infoPersonnel']['nom']}"),
+                                Text("${e['infoPersonnel']['telephone']}"),
                             trailing: const Icon(
                               Icons.arrow_forward_ios,
                               size: 15,
@@ -251,11 +262,9 @@ class TicketDetails extends StatelessWidget {
                             onTap: () {
                               //showSimpleModal(Emplacement(), context);
                             },
-                            leading:
-                                Icon(Icons.airline_seat_recline_extra_rounded),
-                            title: const Text("Emplacement dans le bus"),
-                            subtitle: Text(
-                                "Place N° ${e['infoPersonnel']['telephone']}"),
+                            leading: Icon(Icons.location_on),
+                            title: const Text("Adresse"),
+                            subtitle: Text("${e['infoPersonnel']['adresse']}"),
                             trailing: const Icon(
                               Icons.arrow_forward_ios,
                               size: 15,
@@ -265,25 +274,9 @@ class TicketDetails extends StatelessWidget {
                             onTap: () {
                               //showSimpleModal(Emplacement(), context);
                             },
-                            leading:
-                                Icon(Icons.airline_seat_recline_extra_rounded),
-                            title: const Text("Emplacement dans le bus"),
-                            subtitle: Text(
-                                "Place N° ${e['infoPersonnel']['adresse']}"),
-                            trailing: const Icon(
-                              Icons.arrow_forward_ios,
-                              size: 15,
-                            ),
-                          ),
-                          ListTile(
-                            onTap: () {
-                              //showSimpleModal(Emplacement(), context);
-                            },
-                            leading:
-                                Icon(Icons.airline_seat_recline_extra_rounded),
-                            title: const Text("Emplacement dans le bus"),
-                            subtitle:
-                                Text("Place N° ${e['infoPersonnel']['sexe']}"),
+                            leading: Icon(Icons.language),
+                            title: const Text("Sexe"),
+                            subtitle: Text("${e['infoPersonnel']['sexe']}"),
                             trailing: const Icon(
                               Icons.arrow_forward_ios,
                               size: 15,

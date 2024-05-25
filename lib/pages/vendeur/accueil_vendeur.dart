@@ -39,7 +39,7 @@ class _Accueil extends State<AccueilVendeur> {
       //     "Kenda",
       //     style: TextStyle(color: Colors.white),
       //   ),
-      //   backgroundColor: Colors.indigo.shade900,
+      //   backgroundColor: Colors.green.shade900,
       // ),
       body: Obx(
         () => index.value == 0
@@ -55,7 +55,7 @@ class _Accueil extends State<AccueilVendeur> {
           });
         },
         currentIndex: index.value,
-        selectedItemColor: Colors.indigo.shade900,
+        selectedItemColor: Colors.green.shade900,
         unselectedItemColor: Colors.grey.shade400,
         items: const [
           BottomNavigationBarItem(

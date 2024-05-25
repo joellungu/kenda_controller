@@ -45,7 +45,7 @@ class Historique extends GetView<HistoriqueController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.indigo.shade900,
+        backgroundColor: Colors.black,
         centerTitle: false,
         title: const Text(
           "Reservation",

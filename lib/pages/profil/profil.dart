@@ -13,6 +13,11 @@ class Profil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: affiche
+          ? null
+          : AppBar(
+              backgroundColor: Colors.black,
+            ),
       body: Column(
         //padding: const EdgeInsets.all(10),
         children: [
@@ -196,7 +201,7 @@ class Profil extends StatelessWidget {
                             ),
                           ),
                           decoration: BoxDecoration(
-                            color: Colors.indigo.shade900,
+                            color: Colors.green.shade900,
                             borderRadius: BorderRadius.circular(10),
                             // gradient: LinearGradient(
                             //   begin: Alignment.centerLeft,

@@ -12,7 +12,11 @@ class Emplacement extends StatefulWidget {
   List? l;
   Map? e;
   DateTime? date;
-  Emplacement({super.key, this.l, this.e, this.date});
+
+  String? depart;
+  String? arrive;
+  //
+  Emplacement(this.depart, this.arrive, {super.key, this.l, this.e, this.date});
 
   @override
   State<StatefulWidget> createState() {
@@ -112,7 +116,8 @@ class _Emplacement extends State<Emplacement> {
                     "Veuillez selectionner une ou plusieurs places.",
                     colorText: Colors.white, backgroundColor: Colors.indigo);
               } else {
-                Get.to(Paiement(widget.e!, widget.date));
+                Get.to(Paiement(
+                    widget.e!, widget.date, widget.depart!, widget.arrive!));
               }
             },
             child: Padding(
@@ -130,7 +135,7 @@ class _Emplacement extends State<Emplacement> {
                   bottom: 2,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.indigo.shade900,
+                  color: Colors.green.shade900,
                   borderRadius: BorderRadius.circular(10),
                   // gradient: LinearGradient(
                   //   begin: Alignment.centerLeft,

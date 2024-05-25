@@ -85,7 +85,7 @@ class _Recherche extends State<Recherche> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.indigo.shade900, // Status bar color
+      color: Colors.black, // Status bar color
       child: SafeArea(
         left: false,
         right: false,
@@ -116,7 +116,7 @@ class _Recherche extends State<Recherche> {
                 child: CustomScrollView(
                   slivers: <Widget>[
                     SliverAppBar(
-                      backgroundColor: Colors.indigo.shade900,
+                      backgroundColor: Colors.black,
                       onStretchTrigger: () {
                         print("Le truc strck");
                         return Future.value();
@@ -224,7 +224,7 @@ class _Recherche extends State<Recherche> {
                                         },
                                         icon: Icon(
                                           Icons.help,
-                                          color: Colors.indigo.shade900,
+                                          color: Colors.black,
                                         ),
                                       ),
                                     ],
@@ -240,9 +240,18 @@ class _Recherche extends State<Recherche> {
                                       //
                                     },
                                     style: ButtonStyle(
+                                      shape: MaterialStateProperty.all(
+                                        RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          side: BorderSide(
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                      ),
                                       backgroundColor:
                                           MaterialStateProperty.all(
-                                        Colors.indigo.shade800,
+                                        Colors.black,
                                       ),
                                       elevation: MaterialStateProperty.all(0),
                                     ),
@@ -302,9 +311,18 @@ class _Recherche extends State<Recherche> {
                                       showSimpleModal(Lieu(1), context);
                                     },
                                     style: ButtonStyle(
+                                      shape: MaterialStateProperty.all(
+                                        RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          side: BorderSide(
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                      ),
                                       backgroundColor:
                                           MaterialStateProperty.all(
-                                        Colors.indigo.shade800,
+                                        Colors.black,
                                       ),
                                       elevation: MaterialStateProperty.all(0),
                                     ),
@@ -375,7 +393,7 @@ class _Recherche extends State<Recherche> {
                                   //         },
                                   //         icon: Icon(
                                   //           Icons.help,
-                                  //           color: Colors.indigo.shade900,
+                                  //           color: Colors.green.shade900,
                                   //         ),
                                   //       ),
                                   //     ],
@@ -402,7 +420,7 @@ class _Recherche extends State<Recherche> {
                             //         //   borderRadius: BorderRadius.circular(16),
                             //         // ),
                             //         decoration: BoxDecoration(
-                            //           color: Colors.indigo.shade900,
+                            //           color: Colors.green.shade900,
                             //           border: Border.all(
                             //             color: Colors.indigo.shade700,
                             //             width: 2,
@@ -594,8 +612,16 @@ class _Recherche extends State<Recherche> {
                                 }
                               },
                               style: ButtonStyle(
+                                shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    side: BorderSide(
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
                                 backgroundColor: MaterialStateProperty.all(
-                                  Colors.green.shade700,
+                                  Colors.green.shade900,
                                 ),
                                 elevation: MaterialStateProperty.all(0),
                               ),
@@ -612,7 +638,7 @@ class _Recherche extends State<Recherche> {
                                 width: Get.size.width / 1.2,
                               ),
                             ),
-                            Align(
+                            const Align(
                               alignment: Alignment.centerLeft,
                               child: Padding(
                                 padding: EdgeInsets.only(left: 20, top: 20),
@@ -764,7 +790,7 @@ class _Recherche extends State<Recherche> {
                 duration: const Duration(milliseconds: 800),
                 child: Container(
                   height: 55,
-                  color: Colors.indigo.shade900,
+                  color: Colors.green.shade900,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -776,7 +802,7 @@ class _Recherche extends State<Recherche> {
                         ),
                       ),
                       const Text(
-                        "AYA",
+                        "AIYA",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 17,

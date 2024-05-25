@@ -16,7 +16,11 @@ class Paiement extends StatefulWidget {
   //
   Map e;
   DateTime? date;
-  Paiement(this.e, this.date) {
+
+  String depart;
+  String arrive;
+
+  Paiement(this.e, this.date, this.depart, this.arrive) {
     Map x = e;
     x["chauffeur"] = "";
     x["embarqueur"] = "";
@@ -58,7 +62,7 @@ class _Paiement extends State<Paiement> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.indigo.shade900,
+      color: Colors.green.shade900,
       child: SafeArea(
         left: false,
         right: false,
@@ -72,7 +76,7 @@ class _Paiement extends State<Paiement> {
                 color: Colors.white,
               ),
             ),
-            backgroundColor: Colors.indigo.shade900,
+            backgroundColor: Colors.green.shade900,
             leading: IconButton(
               onPressed: () {
                 //
@@ -85,7 +89,7 @@ class _Paiement extends State<Paiement> {
               ),
             ),
           ),
-          //backgroundColor: Colors.indigo.shade900,
+          //backgroundColor: Colors.green.shade900,
           body: Column(
             children: [
               Expanded(
@@ -132,34 +136,34 @@ class _Paiement extends State<Paiement> {
                       children: [
                         Padding(
                           padding: EdgeInsets.all(20),
-                          // child: TextField(
-                          //   autofocus: true,
-                          //   controller: numero,
-                          //   keyboardType: TextInputType.number,
-                          //   style: const TextStyle(
-                          //     fontSize: 25,
-                          //     color: Colors.white70,
-                          //   ),
-                          //   decoration: InputDecoration(
-                          //     fillColor: Colors.indigo.shade900,
-                          //     filled: true,
-                          //     prefix: const Text(
-                          //       "+243  ",
-                          //       style: TextStyle(
-                          //         color: Colors.white70,
-                          //         fontWeight: FontWeight.bold,
-                          //         fontSize: 25,
-                          //       ),
-                          //     ),
-                          //     suffixIcon: const Icon(
-                          //       Icons.phone_android_outlined,
-                          //       color: Colors.white70,
-                          //     ),
-                          //     border: const OutlineInputBorder(
-                          //       borderSide: BorderSide(),
-                          //     ),
-                          //   ),
-                          // ),
+                          child: TextField(
+                            autofocus: true,
+                            controller: numero,
+                            keyboardType: TextInputType.number,
+                            style: const TextStyle(
+                              fontSize: 25,
+                              color: Colors.white70,
+                            ),
+                            decoration: InputDecoration(
+                              fillColor: Colors.green.shade900,
+                              filled: true,
+                              prefix: const Text(
+                                "+243  ",
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                ),
+                              ),
+                              suffixIcon: const Icon(
+                                Icons.phone_android_outlined,
+                                color: Colors.white70,
+                              ),
+                              border: const OutlineInputBorder(
+                                borderSide: BorderSide(),
+                              ),
+                            ),
+                          ),
                         ),
                         const SizedBox(
                           height: 5,
@@ -298,7 +302,7 @@ class _Paiement extends State<Paiement> {
                           //String parametres =
                           //  "12-12-2023,15:00,+243,815381693,80500,CDF,kinshasa,kilongo,2,12-13,12345,false";
                           //
-                          if (true) {
+                          if (numero.text.length == 9) {
                             //numero.text.length == 9
                             print("le numéro:" "243" + numero.text);
                             //
@@ -343,7 +347,9 @@ class _Paiement extends State<Paiement> {
                               //
                               le.add({
                                 "idCourse": "${widget.e['id']}",
-                                "itinerance": "${widget.e['troncons']}",
+                                "itinerance":
+                                    "${widget.depart} à ${widget.arrive}",
+                                //"${widget.e['troncons']}",
                                 //"idAgent": "",
                                 "idAgentVendeur": agent['id'],
                                 "datePaiement": "${d.day}-${d.month}-${d.year}",
@@ -594,6 +600,6 @@ class _Paiement extends State<Paiement> {
   //
   String getReference() {
     var uuid = Uuid();
-    return "${uuid.v4()}";
+    return uuid.v4();
   }
 }

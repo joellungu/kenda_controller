@@ -321,7 +321,7 @@ class Buss extends StatelessWidget {
                                           bottom: 2,
                                         ),
                                         decoration: BoxDecoration(
-                                          color: Colors.indigo.shade900,
+                                          color: Colors.green.shade900,
                                           borderRadius:
                                               BorderRadius.circular(10),
                                           // gradient: LinearGradient(

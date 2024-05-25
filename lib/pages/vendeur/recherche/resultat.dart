@@ -38,7 +38,7 @@ class Resultat extends GetView<ResultatController> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            backgroundColor: Colors.indigo.shade900,
+            backgroundColor: Colors.black,
             pinned: true,
             snap: false,
             floating: false,

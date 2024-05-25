@@ -31,7 +31,7 @@ void main() async {
   ResultatController resultatController = Get.put(ResultatController());
   //
   SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: Colors.indigo.shade900));
+      SystemUiOverlayStyle(statusBarColor: Colors.green.shade900));
   await GetStorage.init();
   //
   AppController appController = Get.put(AppController());
@@ -78,13 +78,13 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.grey.shade200,
         progressIndicatorTheme: ProgressIndicatorThemeData(
-          color: Colors.blue.shade700,
+          color: Colors.green.shade900,
           linearMinHeight: 1.5,
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
-            primary: Colors.blue,
-          ),
+              //primary: Colors.blue,
+              ),
         ),
         cardTheme: CardTheme(
           color: Colors.white,
@@ -95,13 +95,13 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            onPrimary: Colors.blue,
-            primary: Colors.white,
-          ),
+              //onPrimary: Colors.blue,
+              //primary: Colors.white,
+              ),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: OutlinedButton.styleFrom(
-            primary: Colors.purple,
+            //primary: Colors.purple,
             backgroundColor: Colors.green,
           ),
         ),

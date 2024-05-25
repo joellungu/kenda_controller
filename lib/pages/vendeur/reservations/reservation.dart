@@ -7,7 +7,9 @@ import 'package:kenda_agent/widgets/horaire.dart';
 
 class Reservation extends StatelessWidget {
   Map e;
-  Reservation(this.e) {
+  String depart;
+  String arrive;
+  Reservation(this.e, this.depart, this.arrive) {
     //
     DateTime dateTime = DateTime.now();
     print(e["jourDepart"]);
@@ -87,7 +89,7 @@ class Reservation extends StatelessWidget {
     print("d4: $d4");
 
     return Container(
-      color: Colors.indigo.shade900,
+      color: Colors.green.shade900,
       child: SafeArea(
         left: false,
         right: false,
@@ -101,7 +103,7 @@ class Reservation extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            backgroundColor: Colors.indigo.shade900,
+            backgroundColor: Colors.green.shade900,
             leading: IconButton(
               onPressed: () {
                 //
@@ -118,10 +120,10 @@ class Reservation extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             children: [
               //Horaire(e, lelo),
-              Horaire(e, d1),
-              Horaire(e, d2),
-              Horaire(e, d3),
-              Horaire(e, d4),
+              Horaire(e, d1, depart, arrive),
+              Horaire(e, d2, depart, arrive),
+              Horaire(e, d3, depart, arrive),
+              Horaire(e, d4, depart, arrive),
             ],
           ),
         ),

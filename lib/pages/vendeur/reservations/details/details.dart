@@ -40,7 +40,7 @@ class Details extends StatelessWidget {
     int prix = int.parse("${e['prix']}".split(".")[0]);
 
     return Container(
-      color: Colors.indigo.shade900,
+      color: Colors.green.shade900,
       child: SafeArea(
         left: false,
         right: false,
@@ -54,7 +54,7 @@ class Details extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            backgroundColor: Colors.indigo.shade900,
+            backgroundColor: Colors.green.shade900,
             leading: IconButton(
               onPressed: () {
                 //
@@ -388,7 +388,7 @@ class Details extends StatelessWidget {
                       //   ),
                       // );
 
-                      Get.to(Reservation(e));
+                      Get.to(Reservation(e, depart, arrive));
                     },
                     child: Container(
                       margin: const EdgeInsets.all(5),
